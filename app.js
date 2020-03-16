@@ -40,6 +40,7 @@ var aboutUs_add = require('./routes/aboutUs_add');
 var aboutUs_remove = require('./routes/aboutUs_remove');
 var aboutUs_edit = require('./routes/aboutUs_edit');
 //52
+<<<<<<< HEAD
 //食譜新增
 var recipe_add_form = require('./routes/recipe_add_form');
 var recipe_add = require('./routes/recipe_add');
@@ -60,6 +61,12 @@ var food_add_form = require('./routes/food_add_form');
 var food_add = require('./routes/food_add');
 var food_remove_form = require('./routes/food_remove_form');
 >>>>>>> Stashed changes
+=======
+var recipe_add = require('./routes/recipe_add');
+var recipe_remove = require('./routes/recipe_remove');
+var recipe_edit = require('./routes/recipe_edit');
+var food_add = require('./routes/food_add');
+>>>>>>> backend mix
 var food_remove = require('./routes/food_remove');
 var food_edit = require('./routes/food_edit');
 var question_add = require('./routes/question_add');
@@ -132,12 +139,17 @@ app.use('/aboutUs/add', aboutUs_add);
 app.use('/aboutUs/remove', aboutUs_remove);
 app.use('/aboutUs/edit', aboutUs_edit);
 //52
+<<<<<<< HEAD
 app.use('/recipe/add/form', recipe_add_form);
 app.use('/recipe/add', recipe_add);
 
 app.use('/recipe/remove/form', recipe_remove_form);
 app.use('/recipe/remove', recipe_remove);
 <<<<<<< Updated upstream
+=======
+app.use('/recipe/add', recipe_add);
+app.use('/recipe/remove', recipe_remove);
+>>>>>>> backend mix
 app.use('/recipe/edit', recipe_edit);
 app.use('/food/add', food_add);
 app.use('/food/remove', food_remove);
@@ -145,6 +157,7 @@ app.use('/food/edit', food_edit);
 app.use('/question/add', question_add);
 app.use('/question/remove', question_remove);
 app.use('/question/edit', question_edit);
+<<<<<<< HEAD
 =======
 
 app.use('/recipe/update/no', recipe_update_no);
@@ -164,6 +177,8 @@ app.use('/food/update', food_update);
 //app.use('/question/remove', question_remove);
 //app.use('/question/edit', question_edit);
 >>>>>>> Stashed changes
+=======
+>>>>>>> backend mix
 //42
 app.use('/activityAmount/add/form', activityAmount_add_form);
 app.use('/activityAmount/add', activityAmount_add);

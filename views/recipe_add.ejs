@@ -20,28 +20,28 @@
         <!--~~~~~~~~~~~~~~~~~-->
 
         <ul class="drop-down-menu">
-            <li><a href="/">主頁</a></li>
+
             <li><a href="#">顧客</a>
                 <ul>
                     <li><a href="#">帳號</a>
                         <ul>
-                            <li><a href="/customer/id/add/form">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/customer/id/remove/form">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/customer/id/edit/no">編輯</a>
+                            <li><a href="#">編輯</a>
                             </li>
                         </ul>
                     </li>
 
                     <li><a href="#">顧客資料</a>
                         <ul>
-                            <li><a href="/customer/info/add/form">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/customer/info/remove/form">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/customer/info/edit/no">編輯</a>
-                            </li>  
+                            <li><a href="#">編輯</a>
+                            </li>   
                         </ul>
                     </li>
                 </ul>
@@ -58,19 +58,11 @@
 
             <li><a href="#">食譜管理</a>
                 <ul>
-<<<<<<< HEAD
-                    <li><a href="/recipe/add/form">新增</a>    
-                    </li>
-                    <li><a href="/recipe/remove/form">刪除</a>
-                    </li>
-                    <li><a href="/recipe/edit/form">編輯</a>
-=======
                     <li><a href="/recipe/add">新增</a>    
                     </li>
                     <li><a href="/recipe/remove">刪除</a>
                     </li>
                     <li><a href="/recipe/edit">編輯</a>
->>>>>>> backend mix
                     </li>
                     <li><a href="#">評價</a>
                     </li>                                      
@@ -92,11 +84,11 @@
                 <ul>
                     <li><a href="#">網誌</a>
                         <ul>
-                            <li><a href="/health/blog/add">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/health/blog/remove">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/health/blog/edit">編輯</a>
+                            <li><a href="#">編輯</a>
                             </li>   
                         </ul>    
                     </li>
@@ -104,11 +96,11 @@
                         <ul>
                             <li><a href="#">審核</a>
                             </li>
-                            <li><a href="/experience/add">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/experience/remove">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/experience/edit">編輯</a>
+                            <li><a href="#">編輯</a>
                             </li>   
                         </ul>
                     </li>                              
@@ -119,18 +111,21 @@
                 <ul>
                     <li><a href="#">活動量</a>
                         <ul>
-                            <li><a href="/activity/amount/add">新增</a> </li>
-                            <li><a href="/activity/amount/remove">刪除</a></li>
-                            <li><a href="/activity/amount/edit">編輯</a></li>   
+                            <li><a href="#">新增</a>
+                            </li>
+                            <li><a href="#">刪除</a>
+                            </li>
+                            <li><a href="#">編輯</a>
+                            </li>   
                         </ul>    
                     </li>
                     <li><a href="#">營養分類</a>
                         <ul>
-                            <li><a href="/nutrition/classification/add">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/nutrition/classification/remove">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/nutrition/classification/edit">編輯</a>
+                            <li><a href="#">編輯</a>
                             </li>   
                         </ul>
                     </li>                              
@@ -141,24 +136,24 @@
                 <ul>
                     <li><a href="#">關於我們</a>
                         <ul>
-                            <li><a href="/aboutUs/add">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/aboutUs/remove">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/aboutUs/edit">編輯</a>
+                            <li><a href="#">編輯</a>
                             </li>   
                         </ul>    
                     </li>
                     <li><a href="#">常見問題</a>
                         <ul>
-                            <li><a href="/question/add">新增</a>
+                            <li><a href="#">新增</a>
                             </li>
-                            <li><a href="/question/remove">刪除</a>
+                            <li><a href="#">刪除</a>
                             </li>
-                            <li><a href="/question/edit">編輯</a>
+                            <li><a href="#">編輯</a>
                             </li>   
                         </ul>
-                    </li>                               
+                    </li>                              
                 </ul>
             </li>
 
@@ -173,24 +168,24 @@
         
         <!--~~~~~~~~~~~~~~~~~--> 
         <div class="content">
-                <h2>新增活動量</h2>
+                <h2> 新增食譜 </h2>
 
-                <form action = "/activityAmount/add" method = "post">
+                <form action = "/recipe/add" method = "post">
                     <div class="form">
-                        <span class="name">活動量編號</span>
-                        <span class="value"><input type="text" name="activno"></span>
+                        <span class="name">食譜編號 </span>
+                        <span class="value"><input type="serno" name="recipeNo"></span>
                         <br/>
                                                     
-                        <span class="name">活動量名稱</span>
-                        <span class="value"><input type="text" name="activamount"></span>
+                        <span class="name">食譜名稱 </span>
+                        <span class="value"><input type="title" name="recipeName"></span>
                         <br/>
 
-                        <span class="name">活動量敘述 </span>
-                        <span class="value"><input type="text" name="description"></span>
+                        <span class="name">調味料使用 </span>
+                        <span class="value"><input type="text" name="seasoningUse"></span>
                         <br/>
                                     
                         <span class="name"></span>
-                        <span class="value"><input type="submit" value="新增" ></span>
+                        <span class="value"><input type="submit" value="新增" ></span>    
                     </div>    
                 </form>    
         </div>       

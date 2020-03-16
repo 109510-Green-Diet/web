@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+<<<<<<< HEAD
 //增加引用函式
 const recipe = require('./utility/recipe');
 
@@ -18,3 +19,11 @@ router.post('/', function(req, res, next) {
 });
 
 module.exports = router;
+=======
+//接收GET請求
+router.get('/', function(req, res, next) {
+    res.render('recipe_remove');
+});
+
+module.exports = router; 
+>>>>>>> backend mix
