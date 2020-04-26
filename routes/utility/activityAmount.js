@@ -9,7 +9,7 @@ const sql = require('./asyncDB');
 var add = async function (newData) {
     var result;
 
-    await sql('INSERT INTO active (activno, activamount, description) VALUES ($1, $2, $3)', [newData.activno, newData.activamount, newData.description])
+    await sql('INSERT INTO project.active (activno, activamount, description) VALUES ($1, $2, $3)', [newData.activno, newData.activamount, newData.description])
         .then((data) => {
             result = 0;
         }, (error) => {
@@ -26,7 +26,7 @@ var add = async function (newData) {
 var remove = async function (activno) {
     var result;
 
-    await sql('DELETE FROM active WHERE activno = $1', [activno])
+    await sql('DELETE FROM project.active WHERE activno = $1', [activno])
         .then((data) => {
             result = data.rowCount;
         }, (error) => {

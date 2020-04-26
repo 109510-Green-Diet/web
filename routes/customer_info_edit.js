@@ -12,11 +12,11 @@ router.post('/', function(req, res, next) {
         account:account,                   //產品編號
         height: Number(req.body.height),     //取得產品名稱
         weight: Number(req.body.weight), //取得價格
-        activNo:activNo,
-        foodNo:foodNo  //取得盤點日期
+        activno:req.body.activno,
+        foodno:req.body.foodno  //取得盤點日期
     } 
     
-    customer_info.update(newData).then(d => {
+    customer_info.edit(newData).then(d => {
         if (d>=0){
             res.render('updateSuccess', {results:d});  //傳至成功頁面
         }else{

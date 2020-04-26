@@ -9,16 +9,16 @@ router.post('/', function(req, res, next) {
     var account = req.body.account;                  //取得產品編號
     var height = Number(req.body.height);              //取得產品名稱
     var weight = Number(req.body.weight);          //取得價格
-    var activNo = req.body.activNo;
-    var foodNo = req.body.foodNo;  //取得盤點日期
+    var activno = req.body.activno;
+    var foodno = req.body.foodno;  //取得盤點日期
 
     // 建立一個新資料物件
     var newData={
         account:account,
         height:height,
         weight:weight,
-        activNo:activNo,
-        foodNo:foodNo
+        activno:activno,
+        foodno:foodno
     } 
     
     customer_info.add(newData).then(d => {

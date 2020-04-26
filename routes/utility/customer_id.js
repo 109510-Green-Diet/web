@@ -9,7 +9,7 @@ const sql = require('./asyncDB');
 var add = async function(newData){
     var result;
 
-    await sql('INSERT INTO customer_id (account, name, birth, pic) VALUES ($1, $2, $3, $4)', [newData.account, newData.name, newData.birth, newData.pic])
+    await sql('INSERT INTO project.user (account, username, birth, pic) VALUES ($1, $2, $3, $4)', [newData.account, newData.username, newData.birth, newData.pic])
         .then((data) => {
             result = 0;  
         }, (error) => {
@@ -25,7 +25,7 @@ var add = async function(newData){
 var remove = async function(account){
     var result;
 
-    await sql('DELETE FROM customer_id WHERE account = $1', [account])
+    await sql('DELETE FROM project.user WHERE account = $1', [account])
         .then((data) => {
             result = data.rowCount;  
         }, (error) => {
@@ -41,7 +41,7 @@ var remove = async function(account){
 var query = async function(account){
     var result={};
     
-    await sql('SELECT * FROM customer_id WHERE account = $1', [account])
+    await sql('SELECT * FROM project.user WHERE account = $1', [account])
         .then((data) => {
             if(data.rows.length > 0){
                 result = data.rows[0];   
@@ -58,10 +58,10 @@ var query = async function(account){
 //----------------------------------
 // 更新商品
 //----------------------------------
-var edit = async function(newData){
+var update = async function(newData){
     var results;
 
-    await sql('UPDATE customer_id SET name=$1, birth=$2, pic=$3 WHERE account = $4', [newData.name, newData.birth, newData.pic, newData.account])
+    await sql('UPDATE project.user SET username=$1, birth=$2, pic=$3 WHERE account = $4', [newData.username, newData.birth, newData.pic, newData.account])
         .then((data) => {
             results = data.rowCount;  
         }, (error) => {
@@ -71,4 +71,4 @@ var edit = async function(newData){
     return results;
 }
 //匯出
-module.exports = {add, remove, query, edit};
+module.exports = {add, remove, query, update};

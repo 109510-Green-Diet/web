@@ -79,8 +79,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var session = require('express-session');
+/*var session = require('express-session');
 app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 60000 }}));
+*/
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
@@ -142,6 +143,11 @@ app.use('/nutritionClassification/add', nutritionClassification_add);
 app.use('/nutrition/classification/remove', nutrition_classification_remove);
 app.use('/nutrition/classification/edit', nutrition_classification_edit);
 
+//----------------------------------------
+// 可由外部直接取用資料夾
+//----------------------------------------
+app.use(express.static('public/pic'));
+//-----------------------------------------
 
 
 // catch 404 and forward to error handler
