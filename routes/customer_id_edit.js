@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
 
     var newData={
         account:account,                   //產品編號
-        name: req.body.name,     //取得產品名稱
+        userName: req.body.userName,     //取得產品名稱
         birth: Number(req.body.birth), //取得價格
         pic  //取得盤點日期
     } 

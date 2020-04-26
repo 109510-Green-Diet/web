@@ -14,8 +14,8 @@ router.get('/', function (req, res, next) {
                 account: d.account,
                 height: d.height,
                 weight: d.weight,
-                activNo: d.activNo,
-                foodNo: d.foodNo
+                activno: d.activno,
+                foodno: d.foodno
             }
 
             res.render('customer_info_edit_form', { item: data });  //將資料傳給更新頁面

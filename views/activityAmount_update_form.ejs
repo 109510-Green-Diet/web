@@ -170,14 +170,14 @@
                 <form action = "/activityAmount/update" method = "post">
                     <div class="form">
                         <span class="name">活動量編號</span>
-                        <span class="value"><input type="text" name="activno"></span>
+                        <span class="value"><input type="text" name="activno" value="<%= item.activno %>" readonly></span>
                         
                         <span class="name">活動量名稱</span>
-                        <span class="value"><input type="text" name="activamount"></span>
+                        <span class="value"><input type="text" name="activamount" value="<%= item.activamount %>"></span>
                         <br/>
                 
                         <span class="name">說明</span>
-                        <span class="value"><input type="text" name="description"></span>
+                        <span class="value"><input type="text" name="description" value="<%= item.description %>"></span>
                         <br/>
 
                         <span class="name"></span>

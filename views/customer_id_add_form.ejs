@@ -167,28 +167,28 @@
         <div class="content">
             <h2>帳號新增 </h2>
 
-<form action = "/customer/id/add" method = "post">
-    <div class="form">
-        <span class="name">顧客帳號: </span>
-        <span class="value"><input type="text" name="account"></span>
-        <br/>
-                        
-        <span class="name">暱稱: </span>
-        <span class="value"><input type="text" name="name" ></span>
-        <br/>
+            <form method = "post" enctype="multipart/form-data" action = "/customer/id/add">
+                <div class="form">
+                    <span class="name">顧客帳號: </span>
+                    <span class="value"><input type="text" name="account"></span>
+                    <br/>
+                                    
+                    <span class="name">暱稱: </span>
+                    <span class="value"><input type="text" name="userName" ></span>
+                    <br/>
+                                                        
+                    <span class="name">出生年(西元): </span>
+                    <span class="value"><input type="number" name="birth" length="4" ></span>
+                    <br/>
                                             
-        <span class="name">出生年(西元): </span>
-        <span class="value"><input type="number" name="birth" length="4" ></span>
-        <br/>
-                                
-        <span class="name">頭貼: </span>
-        <span class="value"><input type="file" name="pic" ></span>
-        <br/>	    
-                        
-        <span class="name"></span>
-        <span class="value"><input type="submit" value="新增" ></span>    
-    </div>    
-</form>          
+                    <span class="name">頭貼: </span>
+                    <span class="value"><input type="file" name="pic" ></span>
+                    <br/>	    
+                                    
+                    <span class="name"></span>
+                    <span class="value"><input type="submit" value="新增" ></span>    
+                </div>    
+            </form>          
                
         </div>       
         
