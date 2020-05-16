@@ -12,7 +12,7 @@ const multer = require('multer');
 // 宣告上傳存放空間及檔名更改
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'public/pic');
+        cb(null, 'public/picture');
     },
 
     filename: function (req, file, cb) {
@@ -29,7 +29,7 @@ var upload = multer({
 //---------------------------
 
 //接收POST請求
-router.get('/', upload.single('pic'), function (req, res, next) {
+router.get('/', upload.single('picture'), function (req, res, next) {
     var no = req.query.account;
 
 
@@ -46,14 +46,14 @@ router.get('/', upload.single('pic'), function (req, res, next) {
         if (d != null && d != -1) {
             var data = {
                 account: d.account,
-                userName: d.userName,
+                name: d.name,
                 birth: d.birth,
                 pic: d.pic
             }
 
             // 如果有選擇圖片
             if (typeof (req.file) != 'undefined') {
-                pic = req.file.filename;   //取得上傳照片名稱
+                picture = req.file.filename;   //取得上傳照片名稱
             }
 
             // 建立一個新資料物件

@@ -5,14 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/utility/backuser');
+//var usersRouter = require('./routes/utility/user');
 
 var checkAuth = require('./routes/checkAuth');
 //24
-var backuser_login_form = require('./routes/backuser_login_form');
-var backuser_login = require('./routes/backuser_login');
-var backuser_logout = require('./routes/backuser_logout');
-var backuser_show = require('./routes/backuser_show');
+var user_login_form = require('./routes/user_login_form');
+var user_login = require('./routes/user_login');
+var user_logout = require('./routes/user_logout');
+var user_show = require('./routes/user_show');
 //26
 var customer_id_add_form = require('./routes/customer_id_add_form');
 var customer_id_add = require('./routes/customer_id_add');
@@ -79,21 +79,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//--------------------------------------------------------------------
-// 增加引用express-session
-//--------------------------------------------------------------------
 var session = require('express-session');
 app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 60000 }}));
-//--------------------------------------------------------------------
-
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 //24
-app.use('/backuser/login/form', backuser_login_form);
-app.use('/backuser/login', backuser_login);
-app.use('/backuser/logout', backuser_logout);
-app.use('/backuser/show', backuser_show);
+app.use('/user/login/form', user_login_form);
+app.use('/user/login', user_login);
+app.use('/user/logout', user_logout);
+app.use('/user/show', user_show);
 //26
 app.use('/customer/id/add/form', customer_id_add_form);
 app.use('/customer/id/add', customer_id_add);
@@ -102,11 +97,6 @@ app.use('/customer/id/remove', customer_id_remove);
 app.use('/customer/id/edit/form', customer_id_edit_form);
 app.use('/customer/id/edit', customer_id_edit);
 app.use('/customer/id/edit/no', customer_id_edit_no);
-//----------------------------------------
-// 可由外部直接取用資料夾
-//----------------------------------------
-app.use(express.static('public/pic'));
-//-----------------------------------------
 //26
 app.use('/customer/info/add/form', customer_info_add_form);
 app.use('/customer/info/add', customer_info_add);

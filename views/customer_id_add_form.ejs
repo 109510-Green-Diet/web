@@ -155,40 +155,40 @@
             </li>
 
             <li class="sub">         
-                <a href="/backuser/show">使用者</a>          
+                <a href="/user/show">使用者</a>          
                 <ul>          
-                    <li><a href="/backuser/login/form">登入</a></li>
-                    <li><a href="/backuser/logout">登出</a></li>         
+                    <li><a href="/user/login/form">登入</a></li>
+                    <li><a href="/user/logout">登出</a></li>         
                 </ul>
             </li>     
         </ul>
         
         <!--~~~~~~~~~~~~~~~~~--> 
         <div class="content">
-            <h2>帳號新增</h2>
+            <h2>帳號新增 </h2>
 
-            <form action = "/customer/id/add" method = "post" enctype="multipart/form-data">
-                <div class="form">
-                    <span class="name">顧客帳號: </span>
-                    <span class="value"><input type="text" name="account"></span>
-                    <br/>
-                                    
-                    <span class="name">暱稱: </span>
-                    <span class="value"><input type="text" name="userName" ></span>
-                    <br/>
-                                                        
-                    <span class="name">出生年(西元): </span>
-                    <span class="value"><input type="number" name="birth" length="4" ></span>
-                    <br/>
+<form action = "/customer/id/add" method = "post">
+    <div class="form">
+        <span class="name">顧客帳號: </span>
+        <span class="value"><input type="text" name="account"></span>
+        <br/>
+                        
+        <span class="name">暱稱: </span>
+        <span class="value"><input type="text" name="name" ></span>
+        <br/>
                                             
-                    <span class="name">頭貼: </span>
-                    <span class="value"><input type="file" name="pic" ></span>
-                    <br/>	    
-                                    
-                    <span class="name"></span>
-                    <span class="value"><input type="submit" value="新增" ></span>    
-                </div>    
-            </form>          
+        <span class="name">出生年(西元): </span>
+        <span class="value"><input type="number" name="birth" length="4" ></span>
+        <br/>
+                                
+        <span class="name">頭貼: </span>
+        <span class="value"><input type="file" name="pic" ></span>
+        <br/>	    
+                        
+        <span class="name"></span>
+        <span class="value"><input type="submit" value="新增" ></span>    
+    </div>    
+</form>          
                
         </div>       
         
