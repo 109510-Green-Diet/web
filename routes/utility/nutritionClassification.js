@@ -9,7 +9,7 @@ const sql = require('./asyncDB');
 var add = async function (newData) {
     var result;
 
-    await sql('INSERT INTO nutrition (nutrition_no, nutrition_name, nutrition_description) VALUES ($1, $2, $3)', [newData.nutrition_no, newData.nutrition_name, newData.nutrition_description])
+    await sql('INSERT INTO project.nutrition (nutrition_no, nutrition_name, nutrition_description) VALUES ($1, $2, $3)', [newData.nutrition_no, newData.nutrition_name, newData.nutrition_description])
         .then((data) => {
             result = 0;
         }, (error) => {
@@ -18,6 +18,21 @@ var add = async function (newData) {
 
     return result;
 }
+//----------------------------------
+// 刪除商品
+//----------------------------------
+var remove = async function(nutrition_no){
+    var result;
+
+    await sql('DELETE FROM project.nutrition WHERE nutrition_no = $1', [nutrition_no])
+        .then((data) => {
+            result = data.rowCount;  
+        }, (error) => {
+            result = -1;
+        });
+		
+    return result;
+}
 
 //匯出
-module.exports = {add};
+module.exports = {add, remove};

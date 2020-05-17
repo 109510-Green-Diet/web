@@ -11,7 +11,6 @@ const {Client} = require('pg');
 var pgConn = 'postgres://onrccsoncnchfn:86673f8f2c9e81d41b5cc3a9d184234e8a0faa6fdaeab292fcd09bd1804305dd@ec2-107-21-113-60.compute-1.amazonaws.com:5432/dd30j358196cbp';
 
 
-
 //產生可同步執行sql的函式
 function query(sql, value=null) {
     return new Promise((resolve, reject) => {
