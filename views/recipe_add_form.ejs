@@ -63,9 +63,7 @@
                     <li><a href="/recipe/remove">刪除</a>
                     </li>
                     <li><a href="/recipe/edit">編輯</a>
-                    </li>
-                    <li><a href="#">評價</a>
-                    </li>                                      
+                                                       
                 </ul>
             </li>
 
@@ -168,19 +166,34 @@
         
         <!--~~~~~~~~~~~~~~~~~--> 
         <div class="content">
-            <h2>刪除食譜 </h2>
+                <h2> 新增食譜 </h2>
 
-            <form action = "/recipe/remove" method = "post">
-                <div class="form">
-                    <span class="name">食譜編號 </span>
-                    <span class="value"><input type="serno" name="id"></span>
-                                
-                    <span class="name"></span>
-                    <span class="value"><input type="submit" value="刪除"></span>    
-                </div>    
-            </form>           
-           
-        </div>        
+                <form action = "/recipe/add" enctype="multipart/form-data" method = "post">
+                    <div class="form">
+                        <span class="name">食譜編號 </span>
+                        <span class="value"><input type="text" name="recipeno"></span>
+                        <br/>
+                                                    
+                        <span class="name">食譜名稱 </span>
+                        <span class="value"><input type="text" name="recipe_name"></span>
+                        <br/>
+
+                        <span class="name">調味料使用 </span>
+                        <span class="value"><input type="text" name="seasoning_use"></span>
+                        <br/>
+                        
+                        <span class="name">選擇照片</span>
+                        <span class="value"><input type="file" name="pic" /></span>
+                        <br/>
+
+                        <span class="name">做法 </span>
+                        <span class="value"><input type="text" name="rc_content"></span>
+                        <br/>
+                        <span class="name"></span>
+                        <span class="value"><input type="submit" value="新增" ></span>    
+                    </div>    
+                </form>    
+        </div>       
         
         <!--~~~~~~~~~~~~~~~~~--> 
         <div class="footer">

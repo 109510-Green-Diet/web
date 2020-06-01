@@ -20,7 +20,7 @@
         <!--~~~~~~~~~~~~~~~~~-->
 
         <ul class="drop-down-menu">
-
+            <li><a href="/">主頁</a></li>
             <li><a href="#">顧客</a>
                 <ul>
                     <li><a href="#">帳號</a>
@@ -58,11 +58,11 @@
 
             <li><a href="#">食譜管理</a>
                 <ul>
-                    <li><a href="/recipe/add">新增</a>    
+                    <li><a href="#">新增</a>    
                     </li>
-                    <li><a href="/recipe/remove">刪除</a>
+                    <li><a href="#">刪除</a>
                     </li>
-                    <li><a href="/recipe/edit">編輯</a>
+                    <li><a href="#">編輯</a>
                     </li>
                     <li><a href="#">評價</a>
                     </li>                                      
@@ -71,11 +71,11 @@
 
             <li><a href="#">食材管理</a>
                 <ul>
-                    <li><a href="/food/add">新增</a>    
+                    <li><a href="#">新增</a>    
                     </li>
-                    <li><a href="/food/remove">刪除</a>
+                    <li><a href="#">刪除</a>
                     </li>
-                    <li><a href="/food/edit">編輯</a>
+                    <li><a href="#">編輯</a>
                     </li>                                  
                 </ul>
             </li>
@@ -86,9 +86,9 @@
                         <ul>
                             <li><a href="/health/blog/add">新增</a>
                             </li>
-                            <li><a href="#">刪除</a>
+                            <li><a href="/health/blog/remove">刪除</a>
                             </li>
-                            <li><a href="#">編輯</a>
+                            <li><a href="/health/blog/edit">編輯</a>
                             </li>   
                         </ul>    
                     </li>
@@ -111,22 +111,19 @@
                 <ul>
                     <li><a href="#">活動量</a>
                         <ul>
-                            <li><a href="#">新增</a>
-                            </li>
-                            <li><a href="#">刪除</a>
-                            </li>
-                            <li><a href="#">編輯</a>
-                            </li>   
+                            <li><a href="/activity/amount/add">新增</a> </li>
+                            <li><a href="/activity/amount/remove">刪除</a></li>
+                            <li><a href="/activity/amount/edit">編輯</a></li>   
                         </ul>    
                     </li>
                     <li><a href="#">營養分類</a>
                         <ul>
-                            <li><a href="#">新增</a>
+                            <li><a href="/nutrition/classification/add">新增</a>
                             </li>
-                            <li><a href="#">刪除</a>
+                            <li><a href="/nutrition/classification/remove">刪除</a>
                             </li>
-                            <li><a href="#">編輯</a>
-                            </li>   
+                            <li><a href="/nutrition/classification/edit">編輯</a>
+                            </li> 
                         </ul>
                     </li>                              
                 </ul>
@@ -168,22 +165,22 @@
         
         <!--~~~~~~~~~~~~~~~~~--> 
         <div class="content">
-                <h2> 編輯食譜 </h2>
+                <h2>編輯營養分類</h2>
 
-                <form action = "/recipe/edit" method = "post">
+                <form action = "/recipe/update" method = "post">
                     <div class="form">
-                        <span class="name">食譜編號 </span>
-                        <span class="value"><input type="serno" name="recipeNo"></span>
-                        <br/>
-                                                    
-                        <span class="name">食譜名稱 </span>
-                        <span class="value"><input type="title" name="recipeName"></span>
+                        <span class="name">營養分類編號</span>
+                        <span class="value"><input type="text" name="recipe_no" value="<%= item.recipe_no %>" readonly></span>
                         <br/>
 
-                        <span class="name">調味料使用 </span>
-                        <span class="value"><input type="text" name="seasoningUse"></span>
+                        <span class="name">營養分類名稱</span>
+                        <span class="value"><input type="text" name="recipe_name" value="<%= item.recipe_name %>"></span>
                         <br/>
-                                    
+
+                        <span class="name">營養分類說明</span>
+                        <span class="value"><input type="text" name="seasoning_use" value="<%= item.seasoning_use %>"></span>
+                        <br/>
+
                         <span class="name"></span>
                         <span class="value"><input type="submit" value="更新" ></span>      
                     </div>    
