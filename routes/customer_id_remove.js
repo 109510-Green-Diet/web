@@ -6,9 +6,9 @@ const customer_id = require('./utility/customer_id');
 
 //接收POST請求
 router.post('/', function(req, res, next) {
-    var account = req.body.account;   //取得產品編號
+    var user_account = req.body.user_account;   //取得產品編號
    
-    customer_id.remove(account).then(d => {
+    customer_id.remove(user_account).then(d => {
         if(d>=0){
             res.render('removeSuccess', {results:d});  //傳至成功頁面     
         }else{

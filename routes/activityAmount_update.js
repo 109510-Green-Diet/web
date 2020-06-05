@@ -6,12 +6,12 @@ const activityAmount = require('./utility/activityAmount');
 
 //接收POST請求
 router.post('/', function(req, res, next) {
-    var activno = req.body.activno;   //取得產品編號
+    var actno = req.body.actno;   //取得產品編號
 
     var newData={
-        activno:activno,                   //產品編號
-        activityAmount: req.body.activityAmount,     //取得產品名稱
-        description: req.body.description
+        actno:actno,                   //產品編號
+        act_amount: req.body.act_amount,     //取得產品名稱
+        act_content: req.body.act_content  //取得盤點日期
     } 
     
     activityAmount.update(newData).then(d => {

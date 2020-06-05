@@ -6,19 +6,19 @@ const nutritionClassification = require('./utility/nutritionClassification');
 
 //接收POST請求
 router.post('/', function(req, res, next) {
-    var nutrition_no = req.body.nutrition_no;                  //取得產品編號
-    var nutrition_name = req.body.nutrition_name;              //取得產品名稱
-    var nutrition_description = req.body.nutrition_description;          //取得價格
+    var nutno = req.body.nutno;                  //取得產品編號
+    var nut_name = req.body.nut_name;              //取得產品名稱
+    var nut_content = req.body.nut_content;          //取得價格
 
     // 建立一個新資料物件
     var newData={
-        nutrition_no:nutrition_no,
-        nutrition_name:nutrition_name,
-        nutrition_description:nutrition_description
+        nutno:nutno,
+        nut_name:nut_name,
+        nut_content:nut_content
     } 
     
     nutritionClassification.add(newData).then(d => {
-        if (d==0){
+        if (d>=0){
             res.render('addSuccess');  //傳至成功頁面
         }else{
             res.render('addFail');     //導向錯誤頁面

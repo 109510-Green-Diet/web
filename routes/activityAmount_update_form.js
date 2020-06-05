@@ -2,18 +2,19 @@ var express = require('express');
 var router = express.Router();
 
 //增加引用函式
+var moment = require('moment');
 const activityAmount = require('./utility/activityAmount');
 
-//接收POST請求
-router.post('/', function(req, res, next) {
-    var no = req.body.activno;                  //取得產品編號
-    
+//接收GET請求
+router.get('/', function(req, res, next) {
+    var no = req.query.actno;
+
     activityAmount.query(no).then(d => {
         if (d!=null && d!=-1){
             var data = {
-                activno: d.activno,
-                activityAmount: d.activityAmount,
-                description: d.description
+                actno: d.actno,
+                act_amount: d.act_amount,
+                act_content: d.act_content
             }
 
             res.render('activityAmount_update_form', {item:data});  //將資料傳給更新頁面

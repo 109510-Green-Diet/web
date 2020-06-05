@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> backend mix
 //增加引用函式
 const recipe = require('./utility/recipe');
 
@@ -68,6 +71,7 @@ router.post('/', upload.single('pic'), function(req, res, next) {
             res.render('addFail');     //導向錯誤頁面
         }  
     })
+<<<<<<< HEAD
 });
 
 module.exports = router;
@@ -78,4 +82,9 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router; 
+>>>>>>> backend mix
+=======
+});
+
+module.exports = router;
 >>>>>>> backend mix

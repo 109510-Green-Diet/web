@@ -9,7 +9,7 @@ const sql = require('./asyncDB');
 var add = async function (newData) {
     var result;
 
-    await sql('INSERT INTO active (activno, activamount, description) VALUES ($1, $2, $3)', [newData.activno, newData.activamount, newData.description])
+    await sql('INSERT INTO project.active (actno, act_amount, act_content) VALUES ($1, $2, $3)', [newData.actno, newData.act_amount, newData.act_content])
         .then((data) => {
             result = 0;
         }, (error) => {
@@ -23,10 +23,10 @@ var add = async function (newData) {
 //----------------------------------
 // 刪除商品
 //----------------------------------
-var remove = async function (activno) {
+var remove = async function (actno) {
     var result;
 
-    await sql('DELETE FROM active WHERE activno = $1', [activno])
+    await sql('DELETE FROM project.active WHERE actno = $1', [actno])
         .then((data) => {
             result = data.rowCount;
         }, (error) => {
@@ -39,10 +39,10 @@ var remove = async function (activno) {
 //------------------------------------------
 //執行資料庫動作的函式-取出單一商品
 //------------------------------------------
-var query = async function (activno) {
+var query = async function (actno) {
     var result = {};
 
-    await sql('SELECT * FROM active WHERE activno = $1', [activno])
+    await sql('SELECT * FROM project.active WHERE actno = $1', [actno])
         .then((data) => {
             if (data.rows.length > 0) {
                 result = data.rows[0];
@@ -62,7 +62,7 @@ var query = async function (activno) {
 var update = async function (newData) {
     var results;
 
-    await sql('UPDATE active SET  activityAmount=$1, description=$2 where activno=$1', [newData.activityAmount, newData.description, newData.activno])
+    await sql('UPDATE project.active SET  act_amount=$1, act_content=$2 where actno=$1', [newData.act_amount, newData.act_content, newData.actno])
         .then((data) => {
             results = data.rowCount;
         }, (error) => {

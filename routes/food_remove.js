@@ -1,9 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-//接收GET請求
-router.get('/', function(req, res, next) {
-    res.render('food_remove');
+//增加引用函式
+const food = require('./utility/food');
+
+//接收POST請求
+router.post('/', function(req, res, next) {
+    var foodno = req.body.foodno;                  //取得產品編號
+    
+
+    
+    
+    food.remove(foodno).then(d => {
+        if (d>=0){
+            res.render('removeSuccess', {results:d});  //傳至成功頁面
+        }else{
+            res.render('removeFail');     //導向錯誤頁面
+        }  
+    })
 });
 
-module.exports = router; 
+module.exports = router;

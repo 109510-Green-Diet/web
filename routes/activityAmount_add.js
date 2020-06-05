@@ -6,15 +6,15 @@ const activityAmount = require('./utility/activityAmount');
 
 //接收POST請求
 router.post('/', function(req, res, next) {
-    var activno = req.body.activno;                  //取得產品編號
-    var activamount = req.body.activamount;              //取得產品名稱
-    var description = req.body.description;          //取得價格
+    var actno = req.body.actno;                  //取得產品編號
+    var act_amount = req.body.act_amount;              //取得產品名稱
+    var act_content = req.body.act_content;          //取得價格
 
     // 建立一個新資料物件
     var newData={
-        activno:activno,
-        activamount:activamount,
-        description:description
+        actno:actno,
+        act_amount:act_amount,
+        act_content:act_content
     } 
     
     activityAmount.add(newData).then(d => {

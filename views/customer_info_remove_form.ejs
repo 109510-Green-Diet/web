@@ -18,7 +18,6 @@
         </div>        
         
         <!--~~~~~~~~~~~~~~~~~-->
-
         <ul class="drop-down-menu">
             <li><a href="/">主頁</a></li>
             <li><a href="#">顧客</a>
@@ -29,7 +28,7 @@
                             </li>
                             <li><a href="/customer/id/remove/form">刪除</a>
                             </li>
-                            <li><a href="/customer/id/edit/no">編輯</a>
+                            <li><a href="/customer/id/update/no">編輯</a>
                             </li>
                         </ul>
                     </li>
@@ -40,7 +39,7 @@
                             </li>
                             <li><a href="/customer/info/remove/form">刪除</a>
                             </li>
-                            <li><a href="/customer/info/edit/no">編輯</a>
+                            <li><a href="/customer/info/update/no">編輯</a>
                             </li>  
                         </ul>
                     </li>
@@ -71,11 +70,11 @@
 
             <li><a href="#">食材管理</a>
                 <ul>
-                    <li><a href="/food/add">新增</a>    
+                    <li><a href="/food/add/form">新增</a>    
                     </li>
-                    <li><a href="/food/remove">刪除</a>
+                    <li><a href="/food/remove/form">刪除</a>
                     </li>
-                    <li><a href="/food/edit">編輯</a>
+                    <li><a href="/food/update/no">編輯</a>
                     </li>                                  
                 </ul>
             </li>
@@ -84,11 +83,11 @@
                 <ul>
                     <li><a href="#">網誌</a>
                         <ul>
-                            <li><a href="/health/blog/add">新增</a>
+                            <li><a href="/blog/add/form">新增</a>
                             </li>
-                            <li><a href="/health/blog/remove">刪除</a>
+                            <li><a href="/blog/remove/form">刪除</a>
                             </li>
-                            <li><a href="/health/blog/edit">編輯</a>
+                            <li><a href="/blog/update/no">編輯</a>
                             </li>   
                         </ul>    
                     </li>
@@ -96,12 +95,9 @@
                         <ul>
                             <li><a href="#">審核</a>
                             </li>
-                            <li><a href="/experience/add">新增</a>
+                            <li><a href="/experience/add/form">新增</a>
                             </li>
-                            <li><a href="/experience/remove">刪除</a>
-                            </li>
-                            <li><a href="/experience/edit">編輯</a>
-                            </li>   
+                            <li><a href="/experience/remove/form">刪除</a>  
                         </ul>
                     </li>                              
                 </ul>
@@ -111,18 +107,18 @@
                 <ul>
                     <li><a href="#">活動量</a>
                         <ul>
-                            <li><a href="/activity/amount/add">新增</a> </li>
-                            <li><a href="/activity/amount/remove">刪除</a></li>
-                            <li><a href="/activity/amount/edit">編輯</a></li>   
+                            <li><a href="/activityAmount/add/form">新增</a> </li>
+                            <li><a href="/activityAmount/remove/form">刪除</a></li>
+                            <li><a href="/activityAmount/update/no">編輯</a></li>   
                         </ul>    
                     </li>
                     <li><a href="#">營養分類</a>
                         <ul>
-                            <li><a href="/nutrition/classification/add">新增</a>
+                            <li><a href="/nutritionClassification/add/form">新增</a>
                             </li>
-                            <li><a href="/nutrition/classification/remove">刪除</a>
+                            <li><a href="/nutritionClassification/remove/form">刪除</a>
                             </li>
-                            <li><a href="/nutrition/classification/edit">編輯</a>
+                            <li><a href="/nutritionClassification/update/no">編輯</a>
                             </li>   
                         </ul>
                     </li>                              
@@ -143,11 +139,11 @@
                     </li>
                     <li><a href="#">常見問題</a>
                         <ul>
-                            <li><a href="/question/add">新增</a>
+                            <li><a href="/question/add/form">新增</a>
                             </li>
-                            <li><a href="/question/remove">刪除</a>
+                            <li><a href="/question/remove/form">刪除</a>
                             </li>
-                            <li><a href="/question/edit">編輯</a>
+                            <li><a href="/question/update/no">編輯</a>
                             </li>   
                         </ul>
                     </li>                               
@@ -155,14 +151,13 @@
             </li>
 
             <li class="sub">         
-                <a href="/user/show">使用者</a>          
+                <a href="/backuser/show">使用者</a>          
                 <ul>          
-                    <li><a href="/user/login/form">登入</a></li>
-                    <li><a href="/user/logout">登出</a></li>         
+                    <li><a href="/backuser/login/form">登入</a></li>
+                    <li><a href="/backuser/logout">登出</a></li>         
                 </ul>
             </li>     
         </ul>
-        
         <!--~~~~~~~~~~~~~~~~~--> 
         <div class="content">
             <h2>個人資料刪除</h2>
@@ -170,7 +165,7 @@
             <form action = "/customer/info/remove" method = "post">
                 <div class="form">
                     <span class="name">顧客帳號: </span>
-                    <span class="value"><input type="text" name="account"></span>
+                    <span class="value"><input type="text" name="user_account"></span>
                     <br/>
                                                     
                     <span class="name"></span>

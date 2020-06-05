@@ -1,9 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-//接收GET請求
-router.get('/', function(req, res, next) {
-    res.render('question_remove');
+//增加引用函式
+const question = require('./utility/question');
+
+//接收POST請求
+router.post('/', function(req, res, next) {
+    var serno = req.body.serno;                  //取得產品編號
+    
+
+    
+    
+    question.remove(serno).then(d => {
+        if (d==0){
+            res.render('removeSuccess', {results:d});  //傳至成功頁面
+        }else{
+            res.render('removeFail');     //導向錯誤頁面
+        }  
+    })
 });
 
-module.exports = router; 
+module.exports = router;

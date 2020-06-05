@@ -61,7 +61,11 @@ var query = async function(recipeno){
 var update = async function(newData){
     var results;
 
+<<<<<<< HEAD
     await sql('UPDATE project.recipe SET recipe_name=$1, seasoning_use=$2, pic=$3, re_content=$4 WHERE recipeno = $5', [newData.recipe_name, newData.seasoning_use, newData.pic, newData.rc_content, newData.recipeno])
+=======
+    await sql('UPDATE project.recipe SET recipe_name=$1, seasoning_use=$2, pic=$3, rc_content=$4 WHERE recipeno = $5', [newData.recipe_name, newData.seasoning_use, newData.pic, newData.rc_content, newData.recipeno])
+>>>>>>> backend mix
         .then((data) => {
             results = data.rowCount;  
         }, (error) => {
